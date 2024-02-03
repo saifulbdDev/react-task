@@ -1,3 +1,79 @@
 @import "abstract/variables";
 @import 'bootstrap/scss/bootstrap.scss';
 @import "abstract/base";
+$background-color: rgba(169, 169, 169, 0.8);
+$color-a: #46139f;
+$color-b: #ff7f50;
+$white: #fff;
+
+// Mixin for button styles
+@mixin button-style($color, $hover-color) {
+  border: 1px solid $color;
+  background-color: $white;
+  color: $color;
+  &:hover,
+  &:active {
+    background-color: $hover-color;
+    color: $white;
+  }
+}
+
+.btn {
+  &-a {
+    @include button-style($color-a, darken($color-a, 10%));
+    &.active {
+      background-color: $color-a;
+      color: $white;
+    }
+  }
+  &-b {
+    @include button-style($color-b, darken($color-b, 10%));
+    &.active {
+      background-color: $color-b;
+      color: $white;
+    }
+  }
+}
+
+.end-5 {
+  right: 20px;
+}
+
+.modal {
+  display: block;
+  visibility: hidden;
+  .modal-content {
+    opacity: 0;
+  }
+}
+
+.modal-show {
+  visibility: visible;
+  background-color: $background-color;
+  transition: opacity 0.2s linear;
+  .modal-content {
+    opacity: 1;
+    transition: 0.2s linear;
+  }
+}
+
+.model-details-title{
+    font-size: 24px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0px;
+
+}
+.model-details{
+    &__title{
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+    }
+    &__subtitle{
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+    }
+}
