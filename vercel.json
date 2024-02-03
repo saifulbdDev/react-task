@@ -1,0 +1,11 @@
+{
+    "regions": [
+        "dub1"
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
+}
