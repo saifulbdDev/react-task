@@ -40,13 +40,13 @@ const Header = ({ handleCloseModal, handleOpenModal, active, onSearch}) => {
         </button>
       </div>
       <div className="col-12  mt-3">
-        <label className="form-label">Search Conatct :</label>
+        <label className="form-label">Search Contact :</label>
         <input
          value={query}
          onChange={handleChange}
           type="search"
           className="form-control "
-          placeholder="Search your conatct"
+          placeholder="Search your contact"
         />
       </div>
     </div>
